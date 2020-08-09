@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Flujo incompresible</title>
+</head>
+<body>
+    <div id="content">
+        <h1>Flujo incompresible en tuberías</h1>
+        
+        <div class="data-content">
+            <div class="liq-pipe">
+            <div class="liq">
+                <h3 class="prop-title">Propiedades del líquido</h3>
+                <p>Nombre:<input type="text" placeholder="Agua a 25°C" size="17"></p>
+                <p>Densidad:<input type="number" step="any" value="997" placeholder="997" id="density">
+                    <select name="density" id="density-convert">
+                    <option value="1">kg/m3</option>
+                    <option value="1000">g/cm3</option>
+                    <option value="1000">kg/dm3</option>
+                    <option value="16.02">lbm/ft3</option>
+                    <option value="1.938">slug/ft3</option>
+                </select></p>
+                <p>Viscosidad:<input type="number" step="any" value="0.0009" placeholder="0.0009" id="viscosity">
+                    <select name="viscosity" id="viscosity-convert">
+                    <option value="1">Pa-s</option>
+                    <option value="0.001">cP</option>
+                    <option value="6890">reyn</option>
+                    <option value="6.89">mreyn</option>
+                    <option value="0.00689">&mu;reyn</option>
+                </select></p>
+                <p>Caudal:<input type="number" step="any" id="flow">
+                    <select name="flow" id="flow-convert">
+                    <option value="60000">m3/s</option>
+                    <option value="1">lt/min</option>
+                    <option value="60">lt/s</option>
+                    <option value="3.785">gpm</option>
+                    <option value="1699">ft3/s</option>
+                    <option value="16.66667">m3/h</option>
+                </select>
+            </p>
+                <p>Presión de vapor:<input type="number" step="any" value="3.17" id="presure-vap" placeholder="3.17">
+                    <select name="flow" id="presure-vap-convert">
+                    <option value="101.3">kPa</sup></option>
+                    <option value="101300">Pa</option>
+                    <option value="1">atm</option>
+                    <option value="1.013">bar</option>
+                    <option value="14.7">psi</option>
+                </select></p>
+
+            </div>
+            <div class="pipe">
+                <h3>Tramo recto de tubería</h3>
+
+                <p>Longitud: <input type="number" step="any" id="length">
+                    <select name="length" id="length-convert">
+                    <option value="1">m</option>
+                    <option value="0.3048">ft</option>     
+                </select></p>
+
+                <p>Diámetro: <input type="number" step="any" id="diameter">
+                    <select name="diameter" id="diameter-convert">
+                    <option value="1">m</option>
+                    <option value="0.01">cm</option>
+                    <option value="0.001">mm</option>
+                    <option value="0.0254">in</option>
+                    <option value="0.3048">ft</option>
+                </select></p>
+
+                <p>Rugosidad: <input type="number" step="any" id="rugosity">
+                    <select name="rugosity" id="rugosity-convert">
+                    <option value="0.001">mm</sup></option>
+                    <option value="1">m</option>
+                    <option value="0.0254">in</option>     
+                </select></p>
+
+                <h3>Eficiencia de la bomba</h3>
+                <p><input type="number" step="any" value="70" placeholder="70" id="efficiency">%</p>
+
+                
+
+            </div>
+            </div>
+            <div id="accesorios">
+                <h3 class="titulo-accesorios">Accesorios y válvulas</h3>
+
+              
+                <p>Nombre Accesorio</p>   
+                <p>Cantidad</p>
+                <p>Valor de K</p>
+             
+
+               <input type="text">               
+               <input type="number" placeholder="0" id="cantidad-accesorios1">               
+               <input type="number" placeholder="0" id="k-accesorios1" step="any">
+
+               <input type="text">              
+               <input type="number" placeholder="0" id="cantidad-accesorios2">               
+               <input type="number" placeholder="0" id="k-accesorios2" step="any">
+
+               <input type="text">              
+               <input type="number" placeholder="0" id="cantidad-accesorios3">              
+               <input type="number" placeholder="0" id="k-accesorios3" step="any">
+
+               <input type="text">         
+               <input type="number" placeholder="0" id="cantidad-accesorios4">              
+               <input type="number" placeholder="0" id="k-accesorios4" step="any">
+
+               <input type="text">             
+               <input type="number" placeholder="0" id="cantidad-accesorios5">             
+               <input type="number" placeholder="0" id="k-accesorios5" step="any">
+
+               <input type="text">           
+               <input type="number" placeholder="0" id="cantidad-accesorios6">            
+               <input type="number" placeholder="0" id="k-accesorios6" step="any">
+               
+               
+            </div>
+            <div class="instalaciones">
+                <h3 class="titulo-instalaciones">Valores de entrada y salida del fluido</h3>
+                <p>Altura de la entrada, z1:<input type="number" step="any" value="0" placeholder="0" id="height-in">
+                    <select name="height-in" id="height-in-convert">
+                    <option value="1">m</option>
+                    <option value="0.3048">ft</option>                   
+                </select></p>
+                <p>Presión a  la entrada, P1:<input type="number" value="101.3" step="any" placeholder="101.3"id="presure-in">
+                    <select name="presure-in" id="presure-in-convert">
+                    <option value="101.3">kPa</sup></option>
+                    <option value="101300">Pa</option>
+                    <option value="1">atm</option>
+                    <option value="1.013">bar</option>
+                    <option value="14.7">psi</option>
+                </select></p>
+                <p>Velocidad de entrada, V1:<input type="number" value="0" step="any" placeholder="0" id="velocity-in">
+                    <select name="velocity-in" id="velocity-in-convert">
+                    <option value="1">m/s</sup></option>
+                    <option value="0.3048">ft/s</option>
+                </select></p>
+                <p>Altura de la salida, z2:<input type="number" step="any" value="0" placeholder="0" id="height-out">
+                    <select name="height-out" id="height-out-convert">
+                    <option value="1">m</option>
+                    <option value="0.3048">ft</option>                   
+                </select></p>
+                <p>Presión a la salida, P2:<input type="number" step="any" value="101.3" placeholder="101.3" id="presure-out">
+                    <select name="presure-out" id="presure-out-convert">
+                    <option value="101.3">kPa</sup></option>
+                    <option value="101300">Pa</option>
+                    <option value="1">atm</option>
+                    <option value="1.013">bar</option>
+                    <option value="14.7">psi</option>
+                </select></p>
+                <p>Velocidad de salida, V2:<input type="number" step="any" value="0" placeholder="0" id="velocity-out">
+                    <select name="velocity-out" id="velocity-out-convert">
+                    <option value="1">m/s</sup></option>
+                    <option value="0.3048">ft/s</option>
+                </select></p>
+
+            </div>
+            <a href="javascript: document.body.scrollIntoView(false);" onclick="calcular()" class="calcular">CALCULAR</a>
+        </div>
+        
+        <div class="result-content">
+            <h3 class="titulo-resultados">Resultados</h3>
+            <div>
+                <label for="velocidad">Velocidad (m/s)</label>
+                <input type="text" name="velocidad" id="velocidad">
+            </div>
+            <div>
+                <label for="reynolds">Reynolds</label>
+                <input type="text" name="reynolds" id="reynolds">
+            </div>
+            <div>
+                <label for="fanning">Factor de fricción</label>
+                <input type="text" name="fanning" id="fanning">
+            </div>
+            <div>
+                <label for="hftr">Pérdida en tuberías (m)</label>
+                <input type="text" name="hftr" id="hftr">
+            </div>
+            <div>
+                <label for="hfacc">Pérdida en accesorios (m)</label>
+                <input type="text" name="hfacc" id="hfacc">
+            </div>
+            <div>
+                <label for="hbomba">Altura de la bomba (m)</label>
+                <input type="text" name="hbomba" id="hbomba">
+            </div>
+            <div>
+                <label for="pot">Potencia entregada (kW)</label>
+                <input type="text" name="pot" id="pot">
+            </div>
+            <div>
+                <label for="bhp">Potencia total (bHP)</label>
+                <input type="text" name="bhp" id="bhp">
+            </div>
+
+        </div>
+        
+            
+
+    </div>
+    <script src="calculos.js"></script>
+</body>
+</html>
