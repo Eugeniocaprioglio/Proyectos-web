@@ -1,2 +1,1 @@
-# Proyecto-podemos-aprender
-Este repositorio es para compartirlo en proyectos random con fines de aprendizaje :)
+Este repositorio es para proyectos web
