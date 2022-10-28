@@ -1,0 +1,52 @@
+.text-container {
+    display: flex;
+}
+@keyframes typing {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+
+}
+
+.d {
+    animation: typing 0.1s 0.1s backwards;
+}
+
+.o {
+    animation: typing 0.1s 0.2s backwards;
+}
+
+.c {
+    animation: typing 0.1s 0.3s backwards;
+}
+
+.u {
+    animation: typing 0.1s 0.4s backwards;
+}
+
+.m {
+    animation: typing 0.1s 0.5s backwards;
+}
+
+.e {
+    animation: typing 0.1s 0.6s backwards;
+}
+
+.n {
+    animation: typing 0.1s 0.7s backwards;
+}
+
+.t {
+    animation: typing 0.1s 0.8s backwards;
+}
+
+.a {
+    animation: typing 0.1s 0.9s backwards;
+}
+
+.l {
+    animation: typing 0.1s 1s backwards;
+}
